@@ -1,0 +1,119 @@
+/* style.css */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1200px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh; /* Ensure it takes up a good portion of the screen */
+}
+/* Custom styles for the active navigation link */
+.nav-link.active {
+    font-weight: 600;
+    color: #dc2626; /* Red color for active link */
+}
+/* Smooth scroll for internal links */
+html {
+    scroll-behavior: smooth;
+}
+/* Specific styling for the hero section text to match the design */
+.hero-text-burger {
+    color: #dc2626; /* Red */
+}
+.hero-text-chicken {
+    color: #fbbf24; /* Yellow */
+}
+.hero-text-sandwich {
+    color: #dc2626; /* Red */
+}
+
+/* Custom button style */
+.btn-primary {
+    background-color: #1e3a8a; /* Dark blue */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 9999px; /* Fully rounded */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-primary:hover {
+    background-color: #172b6b; /* Darker blue on hover */
+}
+
+/* Social media icons styling */
+.social-icons a {
+    color: #4a4a4a; /* Dark grey */
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: #dc2626; /* Red on hover */
+}
+
+/* Offer badge styling */
+.offer-badge {
+    background-color: #1e3a8a; /* Dark blue */
+    color: white;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    position: absolute;
+    top: -20px; /* Adjust as needed */
+    right: -20px; /* Adjust as needed */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.offer-badge span:first-child {
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    .hero-text-burger, .hero-text-chicken, .hero-text-sandwich {
+        font-size: 3rem; /* Adjust font size for smaller screens */
+    }
+    .social-icons {
+        position: static; /* Remove fixed positioning on mobile */
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .social-icons a {
+        margin: 0 10px; /* Add horizontal spacing */
+    }
+    .offer-badge {
+        width: 60px;
+        height: 60px;
+        font-size: 0.9rem;
+        top: -15px;
+        right: -15px;
+    }
+    .offer-badge span:first-child {
+        font-size: 0.7rem;
+    }
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger King - Official Website</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container">
+        <!-- Header Section -->
+        <header class="flex items-center justify-between p-6 md:p-8 border-b border-gray-200">
+            <!-- Logo -->
+            <div class="flex items-center">
+                <img src="assets\burger-king.png" alt="Burger King Logo" class="h-12 w-12 mr-3 rounded-full">
+                <span class="text-2xl font-bold text-gray-800">BURGER KING</span>
+            </div>
+            <!-- Navigation -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Home</a>
+                <a href="#menu" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Menu</a>
+                <a href="#locations" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Locations</a>
+                <a href="#about" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">About</a>
+                <a href="#contact" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Contact</a>
+            </nav>
+            <!-- Mobile Menu Button (Hamburger) -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-red-500 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </header>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <nav id="mobile-menu" class="hidden md:hidden flex-col items-center py-4 space-y-4 border-b border-gray-200">
+            <a href="#home" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Home</a>
+            <a href="#menu" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Menu</a>
+            <a href="#locations" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Locations</a>
+            <a href="#about" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">About</a>
+            <a href="#contact" class="nav-link text-gray-600 hover:text-red-500 transition-colors duration-300">Contact</a>
+        </nav>
+
+        <!-- Main Content Area - All sections displayed sequentially -->
+        <main class="flex-grow">
+            <!-- Home Section -->
+            <section id="home" class="py-10 px-6 md:px-10 flex flex-col md:flex-row items-center justify-between min-h-[calc(100vh-180px)]">
+                <!-- Left Content -->
+                <div class="flex-1 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                        <span class="hero-text-burger">burger king</span><br>
+                        <span class="hero-text-chicken">chicken</span><br>
+                        <span class="hero-text-sandwich">sandwich</span>
+                    </h1>
+                    <button class="btn-primary mt-8">ORDER NOW</button>
+                </div>
+                <!-- Right Content (Image with Offer) -->
+                <div class="flex-1 relative flex justify-center md:justify-end">
+                    <img src="assets\burger.png" alt="Burger King Chicken Sandwich" class="w-full max-w-md rounded-lg shadow-lg">
+                    <div class="offer-badge">
+                        <span>OFF</span>
+                        <span>50%</span>
+                    </div>
+                </div>
+                <!-- Social Media Icons (Fixed Position for design consistency) -->
+                <div class="social-icons absolute right-6 md:right-10 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4 hidden md:flex">
+                    <a href="#" class="text-2xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-2xl"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-2xl"><i class="fab fa-youtube"></i></a>
+                </div>
+                <!-- Slider Dots (Static for now) -->
+                <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <span class="w-3 h-3 bg-blue-700 rounded-full"></span>
+                    <span class="w-3 h-3 bg-red-500 rounded-full"></span>
+                    <span class="w-3 h-3 bg-blue-700 rounded-full"></span>
+                </div>
+            </section>
+
+            <!-- Menu Section -->
+            <section id="menu" class="py-10 px-6 md:px-10 bg-gray-50">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Our Menu</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Menu Item 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="assets\Whopper.png" alt="Whopper" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">The Whopper</h3>
+                        <p class="text-gray-600 mb-4">Our signature flame-grilled beef patty with fresh toppings.</p>
+                        <span class="text-2xl font-bold text-red-500">$7.99</span>
+                    </div>
+                    <!-- Menu Item 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="assets\CrispySand.png" alt="Crispy Chicken" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Crispy Chicken Sandwich</h3>
+                        <p class="text-gray-600 mb-4">Golden crispy chicken with lettuce and mayo on a toasted bun.</p>
+                        <span class="text-2xl font-bold text-red-500">$6.49</span>
+                    </div>
+                    <!-- Menu Item 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="assets\fries.png" style="height: 250px;" alt="Fries" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">King Fries</h3>
+                        <p class="text-gray-600 mb-4">Perfectly salted, crispy golden fries.</p>
+                        <span class="text-2xl font-bold text-red-500">$2.99</span>
+                    </div>
+                    <!-- Menu Item 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="assets\Onion Rings.png" alt="Onion Rings" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Onion Rings</h3>
+                        <p class="text-gray-600 mb-4">Crispy, golden-brown onion rings.</p>
+                        <span class="text-2xl font-bold text-red-500">$3.49</span>
+                    </div>
+                    <!-- Menu Item 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="assets\Chocolate Milkshake.png" alt="Milkshake" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Chocolate Milkshake</h3>
+                        <p class="text-gray-600 mb-4">Rich and creamy chocolate milkshake.</p>
+                        <span class="text-2xl font-bold text-red-500">$4.29</span>
+                    </div>
+                    <!-- Menu Item 6 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
+                        <img src="assets\Garden Salad.png" alt="Salad" class="w-full h-48 object-cover rounded-md mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Garden Salad</h3>
+                        <p class="text-gray-600 mb-4">Fresh mixed greens with your choice of dressing.</p>
+                        <span class="text-2xl font-bold text-red-500">$5.00</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Locations Section -->
+            <section id="locations" class="py-10 px-6 md:px-10">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Our Locations</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Location 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Downtown Plaza</h3>
+                        <p class="text-gray-600 mb-4">123 Main Street, Cityville, State 12345</p>
+                        <div class="h-48 bg-gray-200 rounded-md flex items-center justify-center text-gray-500">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.213760431872!2d-73.9878568846067!3d40.75800007932646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?q=123+Main+Street,+Cityville" target="_blank" class="text-blue-600 hover:underline mt-4 block">View on Map</a>
+                    </div>
+                    <!-- Location 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Suburbia Mall</h3>
+                        <p class="text-gray-600 mb-4">456 Oak Avenue, Townsville, State 67890</p>
+                        <div class="h-48 bg-gray-200 rounded-md flex items-center justify-center text-gray-500">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0560000000004!2d144.9631!3d-37.8136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218ce2e0!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <a href="https://maps.google.com/?q=456+Oak+Avenue,+Townsville" target="_blank" class="text-blue-600 hover:underline mt-4 block">View on Map</a>
+                    </div>
+                    <!-- Add more locations as needed -->
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="py-10 px-6 md:px-10 bg-gray-50">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">About Us</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Burger King, established in 1954 in Miami, Florida, by founders James McLamore and David Edgerton, stands as one of the world's most iconic fast-food chains, celebrated for its flame-grilled burgers and customer-centric ethos. With a global footprint spanning over 19,000 restaurants across more than 100 countries, Burger King serves millions of customers daily, delivering bold flavors and affordable dining experiences. Its signature offering, the Whopper, introduced in 1957, remains a cornerstone of its menu, featuring a flame-grilled beef patty, fresh lettuce, tomatoes, onions, pickles, mayonnaise, and ketchup, all nestled in a sesame seed bun.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The brand’s “Have It Your Way” philosophy, launched in 1974, revolutionized fast food by prioritizing customer customization, allowing diners to tailor their meals to their preferences. Beyond burgers, Burger King’s menu has evolved to include crispy fries, chicken sandwiches, nuggets, plant-based options like the Impossible Whopper, and a robust breakfast lineup featuring items like the Croissan’wich. This adaptability reflects Burger King’s commitment to meeting diverse tastes and dietary needs while maintaining its reputation for quality and value.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        Headquartered in Miami, Burger King operates under Restaurant Brands International, its parent company since 2014, alongside Tim Hortons and Popeyes. The chain has embraced innovation, from digital ordering and delivery services to eco-conscious initiatives like reducing packaging waste and sourcing sustainable ingredients. Burger King also engages communities through local partnerships and charitable efforts, reinforcing its role as a socially responsible brand.                         Known for its playful marketing, including memorable campaigns and cheeky social media presence, Burger King connects with younger audiences while staying true to its roots. Whether through limited-time offerings, bold new menu items, or global expansion, Burger King continues to ignite appetites and deliver unforgettable dining moments, solidifying its legacy as a fast-food pioneer.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="py-10 px-6 md:px-10">
+                <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">Contact Us</h2>
+                <div class="bg-white p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+                    <p class="text-gray-700 mb-6 text-center">
+                        Have a question or feedback? We'd love to hear from you!
+                    </p>
+                    <div class="flex flex-col md:flex-row justify-around items-center mb-8">
+                        <div class="text-center mb-6 md:mb-0">
+                            <i class="fas fa-phone-alt text-4xl text-red-500 mb-2"></i>
+                            <p class="text-gray-800 text-lg font-semibold">Phone:</p>
+                            <p class="text-gray-600">+1 (800) 555-BURGER</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-envelope text-4xl text-red-500 mb-2"></i>
+                            <p class="text-gray-800 text-lg font-semibold">Email:</p>
+                            <p class="text-gray-600">info@burgerking.com</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-2xl font-semibold text-gray-800 text-center mb-6">Send us a message</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                            <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email:</label>
+                            <input type="email" id="email" name="email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Email">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
+                            <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="flex justify-center">
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </div>
+                    </form>
+
+                    <div class="mt-8 h-64 bg-gray-200 rounded-md flex items-center justify-center text-gray-500">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.213760431872!2d-73.9878568846067!3d40.75800007932646!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1678901234567!5m2!1sen!2sus"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <a href="https://maps.google.com/?q=Burger+King+Headquarters" target="_blank" class="text-blue-600 hover:underline mt-4 block text-center">View Main Office on Map</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="p-6 md:p-8 text-center text-gray-600 border-t border-gray-200">
+            &copy; 2025 Burger King. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script/script.js"></script>
+</body>
+</html>
